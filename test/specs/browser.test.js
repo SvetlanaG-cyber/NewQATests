@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+/*import {assert} from 'chai';
 import exp from '../expected/browser.exp';
 import browse from '../pages/browser.page';
 
@@ -23,4 +23,4 @@ describe('Browse', function () { //define suite title by passing a string
     
       browse.footerDisplayed();
     })
-});
+});*/

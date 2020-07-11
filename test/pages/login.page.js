@@ -1,6 +1,6 @@
 import sel from '../selectors/login-page.sel';
 import exp from '../expected/login.exp';
-import { assert } from 'chai';
+import {assert} from 'chai';
 import Base from './base';
 
 class Login extends Base {
