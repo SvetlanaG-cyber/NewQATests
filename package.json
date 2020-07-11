@@ -1,0 +1,31 @@
+{
+  "name": "we_are_alluma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SvetlanaG-cyber/NewQATests.git"
+  },
+  "author": "Svetlana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SvetlanaG-cyber/NewQATests/issues"
+  },
+  "homepage": "https://github.com/SvetlanaG-cyber/NewQATests#readme",
+  "dependencies": {
+    "@wdio/cli": "^6.1.25",
+    "webdriverio": "^6.1.25"
+  },
+  "devDependencies": {
+    "@wdio/allure-reporter": "^6.1.23",
+    "@wdio/local-runner": "^6.1.25",
+    "@wdio/mocha-framework": "^6.1.19",
+    "@wdio/selenium-standalone-service": "^6.1.14",
+    "@wdio/spec-reporter": "^6.1.23",
+    "@wdio/sync": "^6.1.14"
+  }
+}
