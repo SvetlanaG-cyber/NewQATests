@@ -6,7 +6,7 @@ describe('Login', function () {
         login.loginPageDisplayed();
     })
 
-    /*it('Home-bg-image', function () {
+   /* it('Home-bg-image', function () {
         login.loginPageBgImage();
     })
 
@@ -54,6 +54,10 @@ describe('Login', function () {
         login.loginFormPaddingTop();
     })*/
 
+    it('Login-try-our-quick-screener-redirect', function () {
+        login.loginLincTryOurQuickScreenerRedirect();
+    })
+
     /*it('Login-form-title1-displayed', function () {
         login.loginFormTitle1TextDisplayed();
     })
@@ -76,9 +80,9 @@ describe('Login', function () {
 
     it('Login-form-title1-font-weight', function () {
         login.loginFormTitle1TextFontWeight();
-    })*/
+    })
 
-    it('Login-form-title1-attribute', function () {
+    /*it('Login-form-title1-attribute', function () {
         login.loginFormTitle1TextAttribute();
     })
 
@@ -88,7 +92,7 @@ describe('Login', function () {
 
     it('Login-form-password-ph', function () {
         login.loginFormPasswordPlaceholder();
-    })
+    })*/
 
 
 })

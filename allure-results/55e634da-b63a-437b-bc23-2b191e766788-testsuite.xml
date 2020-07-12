@@ -1,0 +1,176 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1594455999093' stop='1594456035896'>
+    <name>Login</name>
+    <title>Login</title>
+    <test-cases>
+        <test-case start='1594455999094' status='passed' stop='1594456030558'>
+            <name>Home-page-displayed</name>
+            <title>Home-page-displayed</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-3'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-83.0.4103.116'/>
+            </parameters>
+            <steps>
+                <step start='1594455999117' status='passed' stop='1594456029895'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='3ebeffee-f658-4669-8db2-caa786d02aff-attachment.json' type='application/json' size='41'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1594456029902' status='passed' stop='1594456030356'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='5859e56e-c403-4cee-8497-e158efb0d478-attachment.json' type='application/json' size='58'/>
+                        <attachment title='Response' source='d1a4cc14-f2d4-4863-8543-3c9a7411ed73-attachment.json' type='application/json' size='39'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1594456030379' status='passed' stop='1594456030538'>
+                    <name>GET /session/:sessionId/element/0.9477423945612582-1/displayed</name>
+                    <title>GET /session/:sessionId/element/0.9477423945612582-1/displayed</title>
+                    <attachments>
+                        <attachment title='Response' source='a924b3cf-da75-4dfb-ba8e-d6526f048860-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1594456030560' status='broken' stop='1594456032330'>
+            <name>Login-form-title1-attribute</name>
+            <title>Login-form-title1-attribute</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-3'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-83.0.4103.116'/>
+            </parameters>
+            <steps>
+                <step start='1594456030632' status='passed' stop='1594456032327'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='289f89a2-1de7-4095-899c-b9c0daddc572-attachment.png' type='image/png' size='677889'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>getElementAttribute is not defined</message>
+                <stack-trace>ReferenceError: getElementAttribute is not defined
+                    at Login.loginFormTitle1TextAttribute (C:\projects\We_Are_Alluma\test\pages\/login.page.js:95:20)
+                    at Context.&lt;anonymous> (C:\projects\We_Are_Alluma\test\specs\/login-page.test.js:82:15)
+                    at Context.executeSync (C:\projects\We_Are_Alluma\node_modules\@wdio\sync\build\index.js:56:18)
+                    at C:\projects\We_Are_Alluma\node_modules\@wdio\sync\build\index.js:82:70</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1594456032331' status='failed' stop='1594456034151'>
+            <name>Login-form-username-ph</name>
+            <title>Login-form-username-ph</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-3'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-83.0.4103.116'/>
+            </parameters>
+            <steps>
+                <step start='1594456032333' status='passed' stop='1594456032392'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='97736a0e-8b6d-463d-b136-7a90884d6e69-attachment.json' type='application/json' size='72'/>
+                        <attachment title='Response' source='468a7c11-e869-49dd-a7b5-efed12abe8d2-attachment.json' type='application/json' size='301'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1594456032406' status='passed' stop='1594456032614'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='f7fe1c2e-615b-473a-a642-540f57f13943-attachment.json' type='application/json' size='72'/>
+                        <attachment title='Response' source='06043075-514b-41c2-8943-b50c35fa55ec-attachment.json' type='application/json' size='301'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1594456032631' status='passed' stop='1594456034150'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='87f0afc6-1096-4cee-97d8-ab346d91d64d-attachment.png' type='image/png' size='677857'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>expected false to equal true</message>
+                <stack-trace>AssertionError: expected false to equal true
+                    at Login.loginFormUsernamePlaceholder (C:\projects\We_Are_Alluma\test\pages\/login.page.js:125:16)
+                    at Context.&lt;anonymous> (C:\projects\We_Are_Alluma\test\specs\/login-page.test.js:86:15)
+                    at Context.executeSync (C:\projects\We_Are_Alluma\node_modules\@wdio\sync\build\index.js:56:18)
+                    at C:\projects\We_Are_Alluma\node_modules\@wdio\sync\build\index.js:82:70</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1594456034152' status='failed' stop='1594456035894'>
+            <name>Login-form-password-ph</name>
+            <title>Login-form-password-ph</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-3'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-83.0.4103.116'/>
+            </parameters>
+            <steps>
+                <step start='1594456034170' status='passed' stop='1594456034431'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='bc9df723-c44b-4571-91b1-fcc39105cd76-attachment.json' type='application/json' size='72'/>
+                        <attachment title='Response' source='cc1dced4-4ce2-4d69-a89f-fe0774bfce2c-attachment.json' type='application/json' size='301'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1594456034442' status='passed' stop='1594456034503'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='aced6fb6-5358-4a89-9a84-3f1b9fa0c0b4-attachment.json' type='application/json' size='72'/>
+                        <attachment title='Response' source='e0adeb2b-d285-401c-9d34-196f7604d033-attachment.json' type='application/json' size='301'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1594456034525' status='passed' stop='1594456035893'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='c27fbc25-0604-46a4-a522-30d57c1c5c78-attachment.png' type='image/png' size='677857'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>expected false to be true</message>
+                <stack-trace>AssertionError: expected false to be true
+                    at Login.loginFormPasswordPlaceholder (C:\projects\We_Are_Alluma\test\pages\/login.page.js:130:16)
+                    at Context.&lt;anonymous> (C:\projects\We_Are_Alluma\test\specs\/login-page.test.js:90:15)
+                    at Context.executeSync (C:\projects\We_Are_Alluma\node_modules\@wdio\sync\build\index.js:56:18)
+                    at C:\projects\We_Are_Alluma\node_modules\@wdio\sync\build\index.js:82:70</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

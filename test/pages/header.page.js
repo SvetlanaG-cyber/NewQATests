@@ -34,13 +34,13 @@ class Header extends Base {
         assert.isTrue(elem);
     }
 
-    headerEnglishText() {
+    /*headerEnglishText() {
          /*var password = document.querySelector('input[type="password"]:valid').value;
-  document.querySelector('progress').value = '0';*/
+  document.querySelector('progress').value = '0';
         let textHTML =document.querySelector($(sel.headerLanguage)).value;
         console.log(textHTML)
         assert.equal(textHTML,exp.headerLanguageEn);
-    }
+    }*/
 
     /*headerSpanishText() {
         let textHTML = $(sel.headerLanguageSpanish);
@@ -55,12 +55,12 @@ class Header extends Base {
         assert.isTrue(languegesAlign)
     }
 
-    headerEnglishAlign() {
+    /*headerEnglishAlign() {
         let elemEn = $(sel.headerLanguageEnglish).getLocation('x');
         let elemSp = $(sel.headerLanguageSpanish).getLocation('x');
         let englishAlign = (elemSp < elemEn);
         assert.isFalse(englishAlign)
-    }
+    }*/
 
     titleTextColor(){
         const textColor = $(sel.headerTitle).getCSSProperty('color');
@@ -93,3 +93,4 @@ class Header extends Base {
     }*/
 
 }
+export default new Header();

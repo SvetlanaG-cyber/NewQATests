@@ -74,6 +74,13 @@ class Login extends Base {
         assert.equal(elem.value, exp.loginFormPaddingTop);
     }
 
+    loginLincTryOurQuickScreenerRedirect(){
+        $(sel.loginLinkText).click();
+        let newPage = browser.getUrl();
+        assert.equal(newPage, exp.loginLincTryRedirect);
+        this.openBase()
+    }
+
     loginFormTitle1TextDisplayed() {
         let elem = $(sel.loginFormTitle1).isDisplayed();
         assert.equal(elem, true);

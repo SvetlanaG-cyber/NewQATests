@@ -1,4 +1,4 @@
-import header from '../pages/header.page';
+/*import header from '../pages/header.page';
 
 describe('Header', function () {
 
@@ -22,20 +22,20 @@ describe('Header', function () {
     header.languagesExistHeader();
   })
 
-  it('English-exsist-header', function () {
+  /*it('English-exsist-header', function () {
     header.headerEnglishText();
   })
-/*
+
   it('Spanish-exsist-header', function () {
     header.headerSpanishText();
   })*/
 
-  it('Languages-alignment', function () {
-    header.headerLanguagesAlign();
-  })
-
-  it('English-alignment', function () {
+  /*it('English-alignment', function () {
     header.headerEnglishAlign();
+  })*/
+
+  /*it('Languages-alignment', function () {
+    header.headerLanguagesAlign();
   })
 
   it('Title-text-color', function () {
@@ -49,4 +49,4 @@ describe('Header', function () {
   it('Header-beckground-color', function () {
     header.headerBgColor();
   })
-});
+});*/

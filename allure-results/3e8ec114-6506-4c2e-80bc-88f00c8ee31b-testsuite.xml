@@ -1,0 +1,110 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1594521347700' stop='1594521373073'>
+    <name>Login</name>
+    <title>Login</title>
+    <test-cases>
+        <test-case start='1594521347701' status='passed' stop='1594521363316'>
+            <name>Home-page-displayed</name>
+            <title>Home-page-displayed</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-3'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-83.0.4103.116'/>
+            </parameters>
+            <steps>
+                <step start='1594521347845' status='passed' stop='1594521361906'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='b55a2079-65ad-485f-a21d-f5fe7261c493-attachment.json' type='application/json' size='41'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1594521361909' status='passed' stop='1594521362717'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='8ff45fa3-c4c9-4878-b10b-219efe1868cb-attachment.json' type='application/json' size='58'/>
+                        <attachment title='Response' source='e1fa1abc-ccf6-4448-8d09-a9f04e1b1da6-attachment.json' type='application/json' size='40'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1594521362781' status='passed' stop='1594521363281'>
+                    <name>GET /session/:sessionId/element/0.13784912828282447-1/displayed</name>
+                    <title>GET /session/:sessionId/element/0.13784912828282447-1/displayed</title>
+                    <attachments>
+                        <attachment title='Response' source='24e2b058-6e38-4c23-b0ac-e5bbe043fd06-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1594521363317' status='broken' stop='1594521373071'>
+            <name>Login-try-our-quick-screener</name>
+            <title>Login-try-our-quick-screener</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-3'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-83.0.4103.116'/>
+            </parameters>
+            <steps>
+                <step start='1594521363319' status='passed' stop='1594521363487'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='cbe13cd7-f68e-414b-bf8c-7f112e8994e0-attachment.json' type='application/json' size='58'/>
+                        <attachment title='Response' source='d229056c-5d86-4f08-b279-60035342aac4-attachment.json' type='application/json' size='40'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1594521363500' status='passed' stop='1594521371773'>
+                    <name>POST /session/:sessionId/element/0.13784912828282447-2/click</name>
+                    <title>POST /session/:sessionId/element/0.13784912828282447-2/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1594521371773' status='passed' stop='1594521371810'>
+                    <name>GET /session/:sessionId/url</name>
+                    <title>GET /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Response' source='6f1d56b0-18c0-42b7-acae-519f2442a82b-attachment.json' type='application/json' size='41'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1594521371811' status='passed' stop='1594521372110'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='5279401b-fb3c-4769-abb7-62ae9a32cc0f-attachment.json' type='application/json' size='68'/>
+                        <attachment title='Response' source='355c502e-902a-4c78-9d54-1956deafa3f5-attachment.json' type='application/json' size='39'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1594521372296' status='passed' stop='1594521373069'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='e5e89493-75a2-4786-9ce2-89f55f2b32de-attachment.png' type='image/png' size='64392'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>$(...).waitToDisplayed is not a function</message>
+                <stack-trace>TypeError: $(...).waitToDisplayed is not a function
+                    at Login.loginLincTryOurQuickScreenerRedirect (C:\projects\We_Are_Alluma\test\pages\/login.page.js:81:50)
+                    at Context.&lt;anonymous> (C:\projects\We_Are_Alluma\test\specs\/login-page.test.js:58:15)
+                    at Context.executeSync (C:\projects\We_Are_Alluma\node_modules\@wdio\sync\build\index.js:56:18)
+                    at C:\projects\We_Are_Alluma\node_modules\@wdio\sync\build\index.js:82:70</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

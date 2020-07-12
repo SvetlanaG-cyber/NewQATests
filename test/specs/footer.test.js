@@ -1,4 +1,4 @@
-import footer from '../pages/footer.page';
+/*import footer from '../pages/footer.page';
 
 describe('Footer', function () {
     it('Footer-Cont-displayed', function () {
@@ -33,6 +33,18 @@ describe('Footer', function () {
         footer.footerlogoAlignment();   
     })
 
+    it('Footer-icon-linkedin-redirect', function () {
+        footer.footerIconLinkedinRedirect();   
+    })
+
+    it('Footer-icon-fasebook-redirect', function () {
+        footer.footerIconFasebookRedirect();   
+    })
+
+    it('Footer-icon-twitter-redirect', function () {
+        footer.footerIconTwitterRedirect();   
+    })
+
     /*it('Footer-logo-src', function () {
         footer.footerLogoSrc();   
     })
@@ -49,7 +61,12 @@ describe('Footer', function () {
         footer.footerTextInfoGrpRedirect();   
     })*/
 
-    it('Footer-icon-fasebook-redirect', function () {
-        footer.footerIconFasebookRedirect();   
+    /*it('Footer-about-displayed', function () {
+        footer.footerAboutDisplayed();   
     })
-});
+
+    it('Footer-site-link1', function () {
+        footer.footerSiteLink1Is();   
+    })
+
+});*/

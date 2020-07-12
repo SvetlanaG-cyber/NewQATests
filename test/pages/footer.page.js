@@ -6,15 +6,18 @@ import Base from './base';
 class Footer extends Base {
     footerContDisplayed(){
         this.openBase();
-        $(sel.footerCont).waitForDisplayed();
+        let elem = $(sel.footerCont).waitForDisplayed();
+        assert.equal(elem, true)
     }
 
     footerInfoDisplayed() {
-        $(sel.footerInfo).isDisplayed();
+        let elem = $(sel.footerInfo).isDisplayed();
+        assert.equal(elem, true)
     }
 
     footerDisplayed (){
-        $(sel.footerFooter).isDisplayed();
+        let elem = $(sel.footerFooter).isDisplayed();
+        assert.equal(elem, true)
     }
 
     footerBackgroundColor(){
@@ -28,7 +31,9 @@ class Footer extends Base {
     }
 
     footerLogoDisplayed() {
-        $(sel.footerLogo).isDisplayed();
+        let elem = $(sel.footerLogo).isDisplayed();
+        assert.equal(elem, true)
+
     }
 
     footerLogoWidth(){
@@ -55,17 +60,43 @@ class Footer extends Base {
         let logoAlign=$(sel.footerLogo).getCSSProperty('vertical-align');
         assert.equal(logoAlign.value, exp.footerlogoAlign);
     }
-    
-    footerTextInfoGrpRedirect(){
-        let elem = '.gg-footer-cc.gg-footer-info-grp a href'.link();//'.gg-footer-cc-text span a href=Alluma'.link();//'.gg-footer-cc.gg-footer-info-grp a href'
-        $(sel.logo).waitForDisplayed();
-    }
 
     footerIconFasebookRedirect(){
         $(sel.iconFasebook).click();
+        let orgPage = browser.getUrl();
+        assert.equal(orgPage, exp.footerAllumaToFasebook);
         let elem = $(sel.logoAllumaFasebook).isDisplayed();
         assert.equal(elem,true)
         this.openBase()
     }
+
+    footerIconTwitterRedirect(){
+        $(sel.iconTwitter).click();
+        let orgPage = browser.getUrl();
+        assert.equal(orgPage, exp.footerAllumaToTwitter);
+        this.openBase(); 
+    }
+
+    footerIconLinkedinRedirect(){
+        $(sel.iconLinkedin).click();
+        let orgPage = browser.getUrl();
+        assert.equal(orgPage, exp.footerAllumaToLinkedin);
+        this.openBase(); 
+    }
+
+    /*footerAboutDisplayed() {
+        let elem = $(sel.footerAboutline1).isDisplayed();
+        assert.equal(elem, true)
+    }
+    footerSiteLink1Is() {
+        let elem = $(sel.footerAboutline1).isClickable();
+        assert.equal(elem, true)
+    }
+
+    /*footerTextInfoGrpRedirect(){
+        let elem = $('*=alluma.org').getText();
+        assert.equal(elem, 'Alluma')
+        
+    }*/
 }
 export default new Footer();
