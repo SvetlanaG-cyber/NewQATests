@@ -1,4 +1,4 @@
-import data from '../data/login.username';
+import data from '../data/tester.data';
 import loginSel from '../selectors/login-page.sel';
 import headSel from '../selectors/header.sel';
 //import allPlayersSel from '../selectors/all-players-page.sel';
@@ -12,11 +12,11 @@ class Base {
         browser.url('/');
     }
 
-    /*openForgot() {
-        browser.url('/forgot');
+    openForgot() {
+        browser.url('https://cx-sb01-auth01.azurewebsites.net/Account/ForgotUsername?origin');
     }
 
-    openUsers() {
+    /*openUsers() {
         browser.url('/users');
     }
 
@@ -26,7 +26,7 @@ class Base {
         $(loginSel.pass).setValue(data.moderPass); //moderator pass
         $(loginSel.btnLogin).click();
         $(headSel.logOutBtn).waitForDisplayed();
-    }
+    }*/
 
     testLogin() {
         this.openBase();
@@ -43,7 +43,7 @@ class Base {
         $(loginSel.btnLogin).click();
         $(headSel.logOutBtn).waitForDisplayed(3000);
     }
-
+    /*
     allPlayersBtnClick() {
         $(headSel.allPlayerBtn).click();
         $(allPlayersSel.playersTableHeaders).waitForDisplayed();
@@ -68,7 +68,7 @@ class Base {
         $(headSel.continueGameBtn).click();
         assert.equal(browser.getUrl(), exp.redirContinue);
 
-    }
+    }*/
 
     randomString(max) { //you need to set value for string length
         let str = '';
@@ -77,16 +77,16 @@ class Base {
         }
         return str
     }
-
+    /*
     validatePlaceholder(selector, expectedPlaceholder) {
         const actualPlaceholder = $(selector).getAttribute('placeholder');
         assert.equal(actualPlaceholder, expectedPlaceholder);
-    }
+    }*/
 
     clearInputField(selector) {
         $(selector).setValue(['0', 'Backspace']);
     }
-
+  /*
     editBtnClick() {
         $(myAccountSel.editBtn).click();
         $(myAccountSel.titlePass).waitForDisplayed();

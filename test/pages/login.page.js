@@ -1,5 +1,6 @@
 import sel from '../selectors/login-page.sel';
 import exp from '../expected/login.exp';
+import data from '../data/tester.data';
 import {assert} from 'chai';
 import Base from './base';
 
@@ -75,151 +76,171 @@ class Login extends Base {
     }
 
     loginLincTryOurQuickScreenerRedirect(){
-        $(sel.loginLinkText).click();
+        $$(sel.loginLinkText)[0].click();
         let newPage = browser.getUrl();
         assert.equal(newPage, exp.loginLincTryRedirect);
         this.openBase()
     }
 
-    loginFormTitle1TextDisplayed() {
-        let elem = $(sel.loginFormTitle1).isDisplayed();
+    loginFormTitle2TextDisplayed() {
+        let elem = $$(sel.loginFormTitle2)[0].isDisplayed();
         assert.equal(elem, true);
     }
 
-    loginFormTitle1TextColor() {
-        let elem = $(sel.loginFormTitle1).getCSSProperty('color');
-        console.log(elem)
-        assert.equal(elem.value, exp.loginFormTitle1Color);
+    loginFormTitle3TextDisplayed() {
+        let elem = $$(sel.loginFormTitle3)[0].isDisplayed();
+        assert.equal(elem, true);
     }
 
-    loginFormTitle1TextFontSize() {
-        let elem = $(sel.loginFormTitle1).getCSSProperty('font-size');
-        console.log(elem)
-        assert.equal(elem.value, exp.loginFormTitle1TextFontSize);
+    loginFormTitle4TextDisplayed() {
+        let elem = $$(sel.loginFormTitle4)[0].isDisplayed();
+        assert.equal(elem, true);
     }
 
-    loginFormTitle1TextAttribute() {
-        let elem = getElementAttribute($(sel.loginFormTitle1),);
-        console.log(elem)
-        assert.equal(elem.value, exp.loginFormTitle1TextAttribute);
+    loginFormTitle2TextColor() {
+        let elem = $$(sel.loginFormTitle2)[0].getCSSProperty('color').parsed;
+        assert.equal(elem.parsed, exp.loginFormTitle2Color);
     }
 
-    loginFormTitle1TextFontWeight() {
-        let elem = $(sel.loginFormTitle1).getCSSProperty('font-weight');
-        console.log(elem)
-        assert.equal(elem.value, exp.loginFormTitle1TextFontWeight);
+    loginFormTitle2TextFontSize() {
+        let elem = $$(sel.loginFormTitle2)[0].getValue('font-size');
+        assert.equal(elem.value, exp.loginFormTitle2FontSize);
     }
 
-    loginFormTitle1TextLineHeight() {
-        let elem = $(sel.loginFormTitle1).getCSSProperty('line-height');
-        console.log(elem)
+    loginFormTitle2TextAttribute() {
+        let elem = $$(sel.loginFormTitle2)[0].getText();
+        assert.equal(elem.value, exp.loginFormTitle2TextAttribute);
+    }
+
+    loginFormTitle2TextFontWeight() {
+        let elem =$$(sel.loginFormTitle2)[0].getValue('font-weight');
+        assert.equal(elem, exp.loginFormTitle2TextFontWeight);
+    }
+
+    loginFormTitle2TextLineHeight() {
+        let elem = $$(sel.loginFormTitle2)[0].getCSSProperty('line-height').parsed.string;
         assert.equal(elem.value, exp.loginFormTitle1TextLineHeight);
     }
 
-    loginFormTitle1TextMarginTop() {
-        let elem = $(sel.loginFormTitle1).getCSSProperty('margin-top');
-        assert.equal(elem.value, exp.loginFormTitle1TextMarginTop);
+    loginFormTitle2TextMarginTop() {
+        let elem = $$(sel.loginFormTitle2)[0].getCSSProperty('margin-top').parsed.string;
+        assert.equal(elem.value, exp.loginFormTitle2TextMarginTop);
     }
 
-    loginFormTitle1TextMarginBottom() {
-        let elem = $(sel.loginFormTitle1).getCSSProperty('margin-bottom');
-        assert.equal(elem.value, exp.loginFormTitle1TextMarginBottom);
+    loginFormTitle2TextMarginBottom() {
+        let elem = $$(sel.loginFormTitle2)[0].getCSSProperty('margin-bottom').parsed.string;
+        assert.equal(elem.value, exp.loginFormTitle2TextMarginBottom);
     }
 
-    loginFormUsernamePlaceholder() {
-        let userPlaceholder = $(sel.loginInputGroupUs).isDisplayed();
-        console.log(userPlaceholder)
-        assert.equal(userPlaceholder, true);
+    loginFormUsernameInputBox() {
+        let userInput = $(sel.usernameInputBox).isExisting();
+        assert.equal(userInput, true);
     }
 
-    loginFormPasswordPlaceholder() {
-        let passwordPlaceholder = $(sel.loginInputGroupPas).isDisplayed();
-        assert.isTrue(passwordPlaceholder);
+    loginFormPasswordInputBox() {
+        let passwordInput = $(sel.passwordInputBox).isDisplayed();
+        assert.isTrue(passwordInput);
     }
-
     
-/*
-    formDisplayed() {
-        $(sel.form).isDisplayed();
+    loginEmptyUsernameInputBox() {
+        $(sel.passwordInputBox).addValue(data.testPassword);
+        $$(sel.loginBtnLogin)[0].click();
+        let elem = $$(sel.loginErrorMessageUsername)[0].waitForDisplayed();
+        assert.equal(elem,true);
+        this.openBase();
     }
 
-    usernameDisplayed() {
-        $(sel.email).isDisplayed();
+    loginEmptyPasswordInputBox() {
+         $(sel.usernameInputBox).addValue(data.testUsername);
+         $$(sel.loginBtnLogin)[0].click();
+         let elem = $$(sel.loginErrorMessageUsername)[0].waitForDisplayed();
+         assert.equal(elem,true);
+         this.openBase();
+     }
+
+    errorMassageText() {
+        $(sel.usernameInputBox).addValue(data.testUsername);
+        $$(sel.loginBtnLogin)[0].click();
+        $$(sel.loginErrorMessageUsername)[0].waitForDisplayed();
+        let elem = $$(sel.loginErrorMessageUsername)[0].getText();
+        assert.equal(elem,exp.errorEmptyPasswordMessageText);
+        this.openBase();
     }
 
-    passFieldDisplayed() {
-        $(sel.pass).isDisplayed();
+     errorPasswordMassageText() {
+        $(sel.passwordInputBox).addValue(data.testPassword);
+        $$(sel.loginBtnLogin)[0].click();
+        let elem = $$(sel.loginErrorMessageUsername)[0].waitForDisplayed();
+        let error  = $$(sel.loginErrorMessageUsername)[0].getText();
+        assert.equal(error, exp.errorEmptyUsernameMessageText);
+        this.openBase();
+    }
+    
+     loginNotRegisterUser() {
+        $(sel.usernameInputBox).addValue(data.testUsername);
+        $(sel.passwordInputBox).addValue(data.testPassword);
+        $$(sel.loginBtnLogin)[0].click();
+        let elem = $$(sel.loginErrorInputUsername)[0].waitForDisplayed();
+        assert.equal(elem,true);
+        this.openBase();
     }
 
-    loginBtnDisplayed() {
-        $(sel.btnLogin).isDisplayed();
+    login100UsernameInputBox() {
+        let elem = $(sel.usernameInputBox).setValue(this.randomString(100)); 
+        assert.equal( $(sel.usernameInputBox).getValue().length, 100);
+       
     }
 
-    remindPassLinkDisplayed() {
-        $(sel.btnReminder).isDisplayed();
+    login101UsernameInputBox() {
+        let elem = $(sel.usernameInputBox).setValue(this.randomString(101));
+        assert.equal( $(sel.usernameInputBox).getValue().length, 100);
+       
     }
 
-    emailPlaceholder() {
-        let ePlacehold = $(sel.email).getAttribute('placeholder');
-        assert.equal(ePlacehold, exp.usernamePlaceholder);
+    login100PasswopdInputBox() {
+        let elem = $(sel.passwordInputBox).setValue(this.randomString(100)); 
+        assert.equal( $(sel.passwordInputBox).getValue().length, 100);
+       
     }
 
-    passPlaceholder() {
-        let pPlace = $(sel.pass).getAttribute('placeholder');
-        assert.equal(pPlace, exp.passPlaceholder);
+    login101PasswordInputBox() {
+        let elem = $(sel.passwordInputBox).setValue(this.randomString(101));
+        assert.equal( $(sel.passwordInputBox).getValue().length, 100);
+       
     }
 
-    errorText() {
-        let error = $(sel.errorText).getText();
-        assert.equal(error, exp.errorText);
+    usernameLinkRedirect() {
+        $$(sel.usernameLink)[0].click();
+        let elem = $$(sel.titleText)[0].getText();
+        assert.equal(elem, exp.forgotUsernamePage);
+        this.openBase();
+
     }
 
-    errorColor() {
-        assert.equal($(sel.errorText).getCSSProperty('color').parsed.rgba, exp.userNotExistColor);
+    passwordLinkRedirect() {
+        $$(sel.passwordLink)[0].click();
+        let elem = $$(sel.titleText)[0].getText();
+        assert.equal(elem,  exp.forgotPasswordPage);
+        this.openBase();
+
     }
 
-    copyPastOff() {
-        let pass = $(sel.pass).getAttribute('type');
-        assert.equal(pass, 'password')
+    usernameImgIsDisplayed() {
+        $$(sel.Img)[1].isDisplayed();
+
     }
 
-    passIncorrect() {
-        let username = 'moderator';
-        let pas = this.randomString(15);
-        $(sel.email).setValue(username);
-        $(sel.pass).setValue(pas);
-        $(sel.btnLogin).click();
-        $(sel.errorText).waitForDisplayed();
+    passwordImgIsDisplayed() {
+        $$(sel.Img)[2].isDisplayed();
+
     }
 
-    remindBtnFunc() {
-        $(sel.btnReminder).click();
-        let titlePage = browser.getUrl();
-        assert.equal(titlePage, exp.urlRemind);
-        $(headSel.logInBtn).click();
-        $(sel.logo).waitForDisplayed();
+    errorIconIsDisplayed() {
+        $$(sel.loginBtnLogin)[0].click();
+        $$(sel.Img)[0].isDisplayed();
     }
 
-    responceSpiner() {
-        $(sel.email).setValue(this.randomString(15));
-        $(sel.pass).setValue(this.randomString(15));
-        $(sel.btnLogin).click();
-        $(sel.spinner).waitForDisplayed(600);
-    }
-
-    reminderTxtColor() {
-        let remTxtColor = $(sel.reminderTxt).getCSSProperty('color');
-        assert.equal($(sel.reminderTxt).isDisplayed(), true);
-    }
-
-    reminderTxtIsCorrect() {
-        let remTxtIsDisp = $(sel.reminderTxt).getText();
-        assert.equal(remTxtIsDisp, exp.remText);
-    }
-
-    pageAfterLogin() {
-        $(sel.pageRatings).waitForDisplayed();
-    }*/
+    //$$(sel.loginBtnLogin)[0].isDisplayed();
 
 }
 

@@ -46,7 +46,7 @@ class Footer extends Base {
     assert.equal(elem.value,exp.footerLogoSrc) 
     }
 
-    footerTextInfoGrpSize(){
+   /* footerTextInfoGrpSize(){
         let elem = $(sel.footer).getCSSProperty('size');
         assert.equal(elem.value, exp.footerInfoGrpTextSize)
     }
@@ -54,7 +54,7 @@ class Footer extends Base {
     footerTextInfoGrpColor(){
         let elem = $(sel.footerInfoGrp).getCSSProperty('color');
         assert.equal(elem.value, exp.footerTextInfoGrpColor)
-    }
+    }*/
 
     footerlogoAlignment(){
         let logoAlign=$(sel.footerLogo).getCSSProperty('vertical-align');

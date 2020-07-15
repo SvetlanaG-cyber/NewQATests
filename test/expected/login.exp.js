@@ -21,13 +21,15 @@ export default {
     loginFormTitle1FontSize: '20px',
     loginFormTitle1FontWeight: '400',
 
+    loginFormTitle2Attribute: 'Welcome to Connections',
     loginFormTitle2Color: 'rgba(108,59,150)',
     loginFormTitle2MarginTop: '31px',
     loginFormTitle2MarginBottom: '0px',
     loginFormTitle2LineHeight: '58px',
-    loginFormTitle2FontSize: '50px',
+    loginFormTitle2FontSize: '50',
     loginFormTitle2FontWeight: '300',
-
+    
+    loginFormTitle3Attribute: 'Connect people with the benefits they need, with one simple application.',
     loginFormTitle3Color: 'rgba(84,84,92)',
     loginFormTitle3MarginTop: '34px',
     loginFormTitle3MarginBottom: '24px',
@@ -35,9 +37,18 @@ export default {
     loginFormTitle3FontSize: '16px',
     loginFormTitle3FontWeight: '400',
 
+    loginFormTitle4Attribute: 'Curious what you may qualify for?',
+
     usernamePlaceholder: '',
     passwordPlaceholder: '',
 
+    errorEmptyUsernameMessageText: 'The Username field is required.',
+    errorEmptyPasswordMessageText: 'The Password field is required.',
+    errorUserMessageText: 'Your user name and password does not match anyone in our system. Please try again.',
+
     loginLincTryRedirect: 'http://oxcdemo.alluma.org/#/quick/intro',
+
+    forgotPasswordPage: 'Forgot Password?',
+    forgotUsernamePage: 'Recover Username',
 
 }

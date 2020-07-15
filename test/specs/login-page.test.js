@@ -1,4 +1,5 @@
-import login from '../pages/login.page';
+/*import login from '../pages/login.page';
+import { assert } from 'chai';
 
 describe('Login', function () {
 
@@ -6,7 +7,7 @@ describe('Login', function () {
         login.loginPageDisplayed();
     })
 
-   /* it('Home-bg-image', function () {
+    it('Home-bg-image', function () {
         login.loginPageBgImage();
     })
 
@@ -52,47 +53,115 @@ describe('Login', function () {
 
     it('Login-form-padding-top', function () {
         login.loginFormPaddingTop();
-    })*/
+    })
 
     it('Login-try-our-quick-screener-redirect', function () {
         login.loginLincTryOurQuickScreenerRedirect();
     })
 
-    /*it('Login-form-title1-displayed', function () {
-        login.loginFormTitle1TextDisplayed();
+    it('Login-form-title2-displayed', function () {
+        login.loginFormTitle2TextDisplayed();
+    })
+     
+    it('Login-form-title3-displayed', function () {
+        login.loginFormTitle3TextDisplayed();
     })
 
-    it('Login-form-title1-margin-top', function () {
-        login.loginFormTitle1TextMarginTop();
+    it('Login-form-title4-displayed', function () {
+        login.loginFormTitle4TextDisplayed();
     })
 
-    it('Login-form-title1-margin-bottom', function () {
-        login.loginFormTitle1TextMarginBottom();
+    it('Login-form-title2-margin-top', function () {
+        login.loginFormTitle2TextMarginTop();
+    })
+    
+    it('Login-form-title2-margin-bottom', function () {
+        login.loginFormTitle2TextMarginBottom();
     })
 
-    it('Login-form-title1-line-height', function () {
-        login.loginFormTitle1TextLineHeight();
+    it('Login-form-title2-line-height', function () {
+        login.loginFormTitle2TextLineHeight();
     })
 
-    it('Login-form-title1-font-size', function () {
-        login.loginFormTitle1TextFontSize();
-    })
-
-    it('Login-form-title1-font-weight', function () {
-        login.loginFormTitle1TextFontWeight();
-    })
-
-    /*it('Login-form-title1-attribute', function () {
-        login.loginFormTitle1TextAttribute();
-    })
-
-    it('Login-form-username-ph', function () {
-        login.loginFormUsernamePlaceholder();
-    })
-
-    it('Login-form-password-ph', function () {
-        login.loginFormPasswordPlaceholder();
+    /*it('Login-form-title2-font-size', function () {
+        login.loginFormTitle2TextFontSize();
     })*/
 
+    /*it('Login-form-title2-font-weight', function () {
+        login.loginFormTitle2TextFontWeight();
+    })
 
-})
+    it('Login-form-title2-attribute', function () {
+        login.loginFormTitle2TextAttribute();
+    })
+
+    it('Login-form-has-username-box', function () {
+        login.loginFormUsernameInputBox();
+    })
+
+    it('Login-form-has-password-box', function () {
+        login.loginFormPasswordInputBox();
+    })
+
+    it('Rondom-string-100-username', function () {
+        login.login100UsernameInputBox();
+    })
+
+    it('Rondom-string-101-username', function () {
+        login.login101UsernameInputBox();
+    })
+
+    it('Rondom-string-100-password', function () {
+        login.login100PasswopdInputBox();
+    })
+
+    it('Rondom-string-101-password', function () {
+        login.login101PasswordInputBox();
+    })
+
+    it('Username-link-redirect', function () {
+        login.usernameLinkRedirect();
+    })
+
+    it('Password-link-redirect', function () {
+        login.passwordLinkRedirect();
+    })
+
+    it('Username-img-is-Displayed', function () {
+        login.usernameImgIsDisplayed();
+    })
+
+    it('Password-img-is-Displayed', function () {
+        login.passwordImgIsDisplayed();
+    })
+
+    it('Error-img-is-Displayed', function () {
+        login.errorIconIsDisplayed();
+    })
+
+    it('Login-form-has-error-username-message', function () {
+        login.loginEmptyUsernameInputBox();
+        
+    })
+
+    it('Login-form-has-error-password-message', function () {
+        login.loginEmptyPasswordInputBox();
+        
+    })
+
+    it('User-is-not-register-message', function () {
+        login.loginNotRegisterUser();
+        
+    })
+
+    it('Error-message-text-is', function () {
+        login.errorMassageText();
+        
+    })
+
+    it('Error-password-message-text-is', function () {
+        login.errorPasswordMassageText();
+        
+    })
+    
+});*/
