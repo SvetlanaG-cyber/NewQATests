@@ -6,13 +6,11 @@ import Base from './base';
 
 class ForgotPassword extends Base {
 
-
     forgotPasswordPageDisplayed() {
         this.openForgotFassword();
         $$(sel.textForgotPassword)[0].waitForDisplayed();
-        let elem = $$(sel.textForgotPassword)[0].getText()
+        let elem = $$(sel.textForgotPassword)[0].getText();
         assert.equal(elem, exp.textForgotPassword);
-
     }
 
     forgotPasswordTitle1TextDisplayed() {
@@ -90,7 +88,7 @@ class ForgotPassword extends Base {
         $(sel.usernameInputBox).setValue('@');
         $$(sel.bottons)[1].click();
         let elem = $$(sel.textEmailSent)[0].getText();
-        assert.equal(elem, exp.textEmailSent)
+        assert.equal(elem, exp.textEmailSent);
     }
 
 
@@ -103,9 +101,8 @@ class ForgotPassword extends Base {
         this.clearInputField()
         $$(sel.btnCancel)[1].click();
         let elem = $$(sel.textMessageColor)[0].getCSSProperty('background-color');
-        assert.equal(elem.value, exp.textMessageColor)
+        assert.equal(elem.value, exp.textMessageColor);
         this.openForgotFassword();
-    
     }  
 
     continueBottonBgColor() {
@@ -121,9 +118,7 @@ class ForgotPassword extends Base {
     cancelBottonText() {
         let elem = $$(sel.btnCancel)[0].getText();
         assert.equal(elem, exp.cancelText);
-    }
-
-    
+    }   
 }
 
 export default new ForgotPassword();

@@ -62,12 +62,4 @@ describe('ForgotUsername', function () {
     it('Botton-recover-color', function () {
         forgotUsername.recoverBottonColor();    
     });
-
-    /*it('Botton-recover-Text', function () {
-        forgotUsername.recoverBottonText();   
-    });
-
-    it('Botton-back-Text', function () {
-        forgotUsername.backBottonText();   
-    });*/
 });

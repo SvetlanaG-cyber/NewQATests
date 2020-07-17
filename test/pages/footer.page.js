@@ -7,54 +7,54 @@ class Footer extends Base {
     footerContDisplayed(){
         this.openBase();
         let elem = $(sel.footerCont).waitForDisplayed();
-        assert.equal(elem, true)
+        assert.equal(elem, true);
     }
 
     footerInfoDisplayed() {
         let elem = $(sel.footerInfo).isDisplayed();
-        assert.equal(elem, true)
+        assert.equal(elem, true);
     }
 
     footerDisplayed (){
         let elem = $(sel.footerFooter).isDisplayed();
-        assert.equal(elem, true)
+        assert.equal(elem, true);
     }
 
     footerBackgroundColor(){
         let footerBackgroundColor = $(sel.footerFooter).getCSSProperty('background-color')
-        assert.equal(footerBackgroundColor.value, exp.footerBgColor)
+        assert.equal(footerBackgroundColor.value, exp.footerBgColor);
     }
 
     footerFontSize(){
         let footerFontSize=$(sel.footerFooter).getCSSProperty('font-size');
-    assert.equal(footerFontSize.value,exp.footerFontSize) 
+    assert.equal(footerFontSize.value,exp.footerFontSize); 
     }
 
     footerLogoDisplayed() {
         let elem = $(sel.footerLogo).isDisplayed();
-        assert.equal(elem, true)
+        assert.equal(elem, true);
 
     }
 
     footerLogoWidth(){
         let elem =$(sel.footerLogo).getCSSProperty('width');
-    assert.equal(elem.value,exp.footerLogoWidth) 
+    assert.equal(elem.value,exp.footerLogoWidth);
     }
 
     footerLogoSrc(){
         let elem =$(sel.footerLogo).getAttribute('src');
-        console.log($(sel.Logo))
-    assert.equal(elem.value,exp.footerLogoSrc) 
+        console.log($(sel.Logo));
+    assert.equal(elem.value,exp.footerLogoSrc); 
     }
 
     footerTextInfoGrpSize(){
         let elem = $(sel.AllumaLink).getCSSProperty('size');
-        assert.equal(elem.value, exp.footerInfoGrpTextSize)
+        assert.equal(elem.value, exp.footerInfoGrpTextSize);
     }
 
     footerTextInfoGrpColor(){
         let elem = $(sel.AllumaLink).getCSSProperty('color');
-        assert.equal(elem.value, exp.footerTextInfoGrpColor)
+        assert.equal(elem.value, exp.footerTextInfoGrpColor);
     }
 
     footerlogoAlignment(){
@@ -67,8 +67,8 @@ class Footer extends Base {
         let orgPage = browser.getUrl();
         assert.equal(orgPage, exp.footerAllumaToFasebook);
         let elem = $(sel.logoAllumaFasebook).isDisplayed();
-        assert.equal(elem,true)
-        this.openBase()
+        assert.equal(elem,true);
+        this.openBase();
     }
 
     footerIconTwitterRedirect(){
@@ -87,16 +87,16 @@ class Footer extends Base {
 
     footerAboutDisplayed() {
         let elem = $(sel.footerAboutline1).isDisplayed();
-        assert.equal(elem, true)
+        assert.equal(elem, true);
     }
     footerSiteLink1Is() {
         let elem = $(sel.footerAboutline1).isClickable();
-        assert.equal(elem, true)
+        assert.equal(elem, true);
     }
 
     footerTextInfoGrpRedirect(){
         let elem = $(sel.AllumaLink).getText();
-        assert.equal(elem, exp.footerText1)
+        assert.equal(elem, exp.footerText1);
         
     }
 }

@@ -16,7 +16,6 @@ class Header extends Base {
         assert.isTrue(elem);
     }
 
-
     headerTitleText() {
         let textHTML = $(sel.headerTitle).getText();
         assert.equal(textHTML, exp.headerTitleText);
@@ -26,7 +25,7 @@ class Header extends Base {
         let headerTitleleft = $(sel.header).getSize('width') / 3;
         let elem = $(sel.headerTitle).getLocation('x');
         let titleAlign = (headerTitleleft > elem);
-        assert.isTrue(titleAlign)
+        assert.isTrue(titleAlign);
     }
 
     titleTextColor(){
@@ -42,8 +41,6 @@ class Header extends Base {
     headerBgColor(){
         const BgColor = $(sel.header).getCSSProperty('background-color');
         assert.equal(BgColor.value, exp.headerBgColor);
-    
     }
-
 }
 export default new Header();

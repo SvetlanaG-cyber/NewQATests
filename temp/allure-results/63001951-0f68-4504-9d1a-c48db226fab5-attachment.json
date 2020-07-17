@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".gg-footer-hdr1\"}\n  (Session info: chrome=83.0.4103.116)",
+  "stacktrace": "Backtrace:\n\tOrdinal0 [0x01009563+2725219]\n\tOrdinal0 [0x00F08551+1672529]\n\tOrdinal0 [0x00DF0359+525145]\n\tOrdinal0 [0x00D89755+104277]\n\tOrdinal0 [0x00DA53C0+218048]\n\tOrdinal0 [0x00D9AAD0+174800]\n\tOrdinal0 [0x00DA3D7C+212348]\n\tOrdinal0 [0x00D9A94B+174411]\n\tOrdinal0 [0x00D82528+75048]\n\tOrdinal0 [0x00D835A0+79264]\n\tOrdinal0 [0x00D83539+79161]\n\tOrdinal0 [0x00F1D607+1758727]\n\tGetHandleVerifier [0x01126546+1050150]\n\tGetHandleVerifier [0x01126291+1049457]\n\tGetHandleVerifier [0x011310D7+1094071]\n\tGetHandleVerifier [0x01126B46+1051686]\n\tOrdinal0 [0x00F15B06+1727238]\n\tOrdinal0 [0x00F1EB7B+1764219]\n\tOrdinal0 [0x00F1ECE3+1764579]\n\tOrdinal0 [0x00F34C05+1854469]\n\tBaseThreadInitThunk [0x76B46359+25]\n\tRtlGetAppContainerNamedObjectPath [0x77A47C24+228]\n\tRtlGetAppContainerNamedObjectPath [0x77A47BF4+180]\n"
+}

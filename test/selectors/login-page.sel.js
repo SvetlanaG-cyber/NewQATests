@@ -6,10 +6,10 @@ export default {
     loginFormTitle2: '.gg-login-form-title2',
     loginFormTitle3: '.gg-login-form-title3:nth-child(3)',
     loginFormTitle4: '.gg-login-form-title1:nth-child(4)',
-    loginLinkText: 'a:nth-child(1)',//.gg-links-text:nth-child(5) 
-    loginBtnLogin: 'button.gg-btn', //.gg-form-group:nth-child(4) 
-    loginErrorInputMessage: 'li:nth-child(1)',//ul:nth-child(1) 
-    loginErrorMessagePassword: 'li:nth-child(2)', //ul:nth-child(1) 
+    loginLinkText: 'a:nth-child(1)', 
+    loginBtnLogin: 'button.gg-btn',  
+    loginErrorInputMessage: 'li:nth-child(1)',
+    loginErrorMessagePassword: 'li:nth-child(2)',
     usernameInputBox: '#Username',
     passwordInputBox: '#Password',
     usernameLink: 'a.gg-link:nth-child(1)',

@@ -9,8 +9,7 @@ class Login extends Base {
     loginPageDisplayed() {
         this.openBase();
         let elem = $(sel.loginMain).isDisplayed();
-        assert.equal(elem, true)
-
+        assert.equal(elem, true);
     }
 
     loginPageBgImage() {
@@ -79,7 +78,7 @@ class Login extends Base {
         $$(sel.loginLinkText)[0].click();
         let newPage = browser.getUrl();
         assert.equal(newPage, exp.loginLincTryRedirect);
-        this.openBase()
+        this.openBase();
     }
 
     loginFormTitle2TextDisplayed() {
@@ -189,26 +188,22 @@ class Login extends Base {
 
     login100UsernameInputBox() {
         let elem = $(sel.usernameInputBox).setValue(this.randomString(100)); 
-        assert.equal( $(sel.usernameInputBox).getValue().length, 100);
-       
+        assert.equal( $(sel.usernameInputBox).getValue().length, 100);      
     }
 
     login101UsernameInputBox() {
         let elem = $(sel.usernameInputBox).setValue(this.randomString(101));
-        assert.equal( $(sel.usernameInputBox).getValue().length, 100);
-       
+        assert.equal( $(sel.usernameInputBox).getValue().length, 100);   
     }
 
     login100PasswopdInputBox() {
         let elem = $(sel.passwordInputBox).setValue(this.randomString(100)); 
-        assert.equal( $(sel.passwordInputBox).getValue().length, 100);
-       
+        assert.equal( $(sel.passwordInputBox).getValue().length, 100);   
     }
 
     login101PasswordInputBox() {
         let elem = $(sel.passwordInputBox).setValue(this.randomString(101));
-        assert.equal( $(sel.passwordInputBox).getValue().length, 100);
-       
+        assert.equal( $(sel.passwordInputBox).getValue().length, 100);   
     }
 
     usernameLinkRedirect() {
@@ -216,7 +211,6 @@ class Login extends Base {
         let elem = $$(sel.titleText)[0].getText();
         assert.equal(elem, exp.forgotUsernamePage);
         this.openBase();
-
     }
 
     passwordLinkRedirect() {
@@ -224,13 +218,11 @@ class Login extends Base {
         let elem = $$(sel.titleText)[0].getText();
         assert.equal(elem,  exp.forgotPasswordPage);
         this.openBase();
-
     }
 
     usernameImgIsDisplayed() {
         let elem = $$(sel.Img)[1].isDisplayed();
         assert.equal(elem, true)
-
     }
 
     passwordImgIsDisplayed() {
@@ -241,16 +233,13 @@ class Login extends Base {
 
     btnLoginIsDisplayed() {
         let elem = $$(sel.loginBtnLogin)[0].isDisplayed();
-        assert.equal(elem, true)
-        
+        assert.equal(elem, true);   
     }
 
     errorIconIsDisplayed() {
         $$(sel.loginBtnLogin)[0].click();
         $$(sel.Img)[0].isDisplayed();
     }
-
-
 }
 
 export default new Login();

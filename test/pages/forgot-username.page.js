@@ -10,7 +10,6 @@ class ForgotUsername extends Base {
         this.openForgotUsername();
         let elem = $$(sel.forgotUsernamePage)[0].waitForDisplayed();
         assert.equal(elem, true);
-
     }
 
     forgotUsernameTitle1TextDisplayed() {
@@ -41,19 +40,16 @@ class ForgotUsername extends Base {
     emailInputBoxIsDisplayd() {
         let elem = $$(sel.email)[0].isDisplayed();
         assert.equal(elem, true);
-
     }
 
     iconInputBoxIsDisplayd() {
         let elem = $$(sel.icon)[0].isDisplayed();
         assert.equal(elem, true);
-
     }
 
     labelInputBox() {
         let elem = $$(sel.labelInputBox)[0].isDisplayed();
         assert.equal(elem, true);
-    
     }
 
     linkIForgotMyPassword() {
@@ -65,8 +61,7 @@ class ForgotUsername extends Base {
         $$(sel.labelInputBox)[1].click();
         let elem = $$(sel.titleText)[0].getText();
         assert.equal(elem,  exp.forgotPasswordPage);
-        this.openForgotUsername();
-        
+        this.openForgotUsername();   
     }
 
     bottonBackRedirect() {
@@ -74,12 +69,10 @@ class ForgotUsername extends Base {
         let elem = $$(sel.btnLogin)[0].waitForDisplayed();
         assert.equal(elem, true);
         this.openForgotUsername();
-
     }
 
     bottonRecoverError() {
         $(sel.email).addValue(data.testPassword);
-
         $$(sel.btnRecover)[1].click();
         let elem = $$(sel.errorMessage)[0].getText();
         assert.equal(elem, exp.errorMessage)
@@ -93,13 +86,9 @@ class ForgotUsername extends Base {
 
     bottonRecoverErrorTextColor() {
         $(sel.email).addValue(data.testPassword);
-        
-
         $$(sel.btnRecover)[1].click();
         let elem = $$(sel.errorMessage)[0].getCSSProperty('color');
-        assert.equal(elem.value, exp.messageColor)
-
-        
+        assert.equal(elem.value, exp.messageColor);    
     }  
 
     recoverBottonColor() {
@@ -116,7 +105,6 @@ class ForgotUsername extends Base {
         let elem = $$('body div:nth-child(2) button')[0].getText();
         assert.equal(elem.value, exp.textBack);
     }
-
 }
 
 export default new ForgotUsername();

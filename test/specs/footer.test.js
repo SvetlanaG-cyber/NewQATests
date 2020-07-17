@@ -45,22 +45,6 @@ describe('Footer', function () {
         footer.footerIconTwitterRedirect();   
     });
 
-    /*it('Footer-logo-src', function () {
-        footer.footerLogoSrc();   
-    });
-
-    /*it('Footer-text-info-grp-color', function () {
-        footer.footerTextInfoGrpColor();   
-    });
-
-    it('Footer-text-info-grp-size', function () {
-        footer.footerTextInfoGrpSize();   
-    });
-
-    it('Footer-text-info-grp-redirect', function () {
-        footer.footerTextInfoGrpRedirect();   
-    });*/
-
     it('Footer-about-displayed', function () {
         footer.footerAboutDisplayed();   
     });

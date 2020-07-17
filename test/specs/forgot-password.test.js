@@ -67,7 +67,6 @@ describe('ForgotPassword', function () {
         forgotPassword.cancelBottonText();   
     });
 
-   
     it('Botton-cancel-redirect', function () {
         forgotPassword.bottonCancelRedirect();   
     });
@@ -79,5 +78,4 @@ describe('ForgotPassword', function () {
     it('Input-box-assepts-username-@', function () {
         forgotPassword.inputBoxAsseptsUsername();   
     });   
-
 })
