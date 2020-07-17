@@ -5,87 +5,69 @@ describe('ForgotUsername', function () {
 
     it('ForgotUsername-page-displayed', function () {
         forgotUsername.forgotUsernamePageDisplayed();
+    });
 
-    })
-/*
     it('ForgotUsername-text1-displayed', function () {
         forgotUsername.forgotUsernameTitle1TextDisplayed();
-
-    })
+    });
 
     it('ForgotUsername-text2-displayed', function () {
-        forgotUsername.forgotUsernameTitle2TextDisplayed();
-        
-    })
+        forgotUsername.forgotUsernameTitle2TextDisplayed();   
+    });
 
     it('ForgotUsername-page-has-2-bottons', function () {
-        forgotUsername.forgotUsernamePage2botton();
-        
-    })
+        forgotUsername.forgotUsernamePage2botton();   
+    });
 
     it('ForgotUsername-page-has-botton-back', function () {
-        forgotUsername.forgotUsernamePageBack();
-        
-    })
+        forgotUsername.forgotUsernamePageBack();    
+    });
 
     it('ForgotUsername-page-has-botton-recover', function () {
-        forgotUsername.forgotUsernamePageRecover();
-        
-    })
+        forgotUsername.forgotUsernamePageRecover();    
+    });
 
     it('ForgotUsername-page-has-input-box', function () {
-        forgotUsername.emailInputBoxIsDisplayd();
-        
-    })
+        forgotUsername.emailInputBoxIsDisplayd();   
+    });
 
     it('Input-box-has-label', function () {
-        forgotUsername.labelInputBox();
-        
-    })
+        forgotUsername.labelInputBox();    
+    });
 
     it('ForgotUsername-page-has-link', function () {
-        forgotUsername.linkIForgotMyPassword();
-        
-    })
+        forgotUsername.linkIForgotMyPassword();    
+    });
 
     it('Bottom-back-redirect-login-page', function () {
-        forgotUsername.bottonBackRedirect();
-        
-    })
+        forgotUsername.bottonBackRedirect();   
+    });
 
     it('Link-I-forgot-redirect-forgot-page', function () {
-        forgotUsername.linkIForgotMyPassword();
-        
-    })*/
+        forgotUsername.linkIForgotMyPassword();    
+    });
 
-    it('Error-massage-text', function () {
-        forgotUsername.bottonRecoverError();
-        
-    })
+    it('Message-text', function () {
+        forgotUsername.bottonRecoverError();    
+    });
 
-    it('Error-email-massage-text-color', function () {
-        forgotUsername.bottonRecoverErrorTextColor();
-        
-    })
+    it('Error-email-message-text-color', function () {
+        forgotUsername.bottonRecoverErrorTextColor();   
+    });
 
     it('Botton-back-color', function () {
-        forgotUsername.backBottonColor();
-        
-    })
+        forgotUsername.backBottonColor();   
+    });
 
     it('Botton-recover-color', function () {
-        forgotUsername.recoverBottonColor();
-        
-    })
+        forgotUsername.recoverBottonColor();    
+    });
 
-    it('Botton-recover-Text', function () {
-        forgotUsername.recoverBottonText();
-        
-    })
+    /*it('Botton-recover-Text', function () {
+        forgotUsername.recoverBottonText();   
+    });
 
     it('Botton-back-Text', function () {
-        forgotUsername.backBottonText();
-        
-    })
-
-})
+        forgotUsername.backBottonText();   
+    });*/
+});

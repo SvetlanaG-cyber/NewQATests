@@ -11,7 +11,7 @@ export default {
     footerBgColor: 'rgba(0,0,0,0)',
     footerFontSize: '14px',
     footerInfoGrpTextSize: '15px',
-    footerInfGrpTextColor: 'rgba(84,84,92,1)',
+    footerInfoGrpTextColor: 'rgba(84,84,92,1)',
     footerAllumaToFasebook: 'https://www.facebook.com/WeAreAlluma/?ref=page_internal',
     footerAllumaToTwitter: 'https://twitter.com/WeAreAlluma',
     footerAllumaToLinkedin: 'https://www.linkedin.com/company/we-are-alluma/',

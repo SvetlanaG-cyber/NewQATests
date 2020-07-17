@@ -1,130 +1,120 @@
-import sel from '../selectors/login-page.sel';
-import exp from '../expected/login.exp';
+import sel from '../selectors/forgot-username.sel';
+import exp from '../expected/forgot-username.exp';
 import {assert} from 'chai';
 import Base from './base';
-import testerData from '../data/tester.data';
+import data from '../data/tester.data';
 
 class ForgotUsername extends Base {
 
     forgotUsernamePageDisplayed() {
-        this.openBase();
-        $$('a.gg-link:nth-child(1)')[0].click()
-        //this.openForgot()
-        let elem = $$('body .gg-login-grid')[0].isDisplayed();
-        assert.equal(elem, true)
+        this.openForgotUsername();
+        let elem = $$(sel.forgotUsernamePage)[0].waitForDisplayed();
+        assert.equal(elem, true);
 
     }
 
     forgotUsernameTitle1TextDisplayed() {
-        let elem = $$('body .gg-login-form-title1')[0].isDisplayed();
+        let elem = $$(sel.title1)[0].isDisplayed();
         assert.equal(elem, true);
     }
 
     forgotUsernameTitle2TextDisplayed() {
-        let elem = $$('body .gg-login-form-title1')[0].isDisplayed();
+        let elem = $$(sel.title1)[0].isDisplayed();
         assert.equal(elem, true);
     }
 
     forgotUsernamePage2botton() {
-        let elem = $$('body div:nth-child(1) button').length;
+        let elem = $$(sel.bottons).length;
         assert.equal(elem, 2);
     }
 
     forgotUsernamePageBack() {
-        let elem = $$('body div:nth-child(1) button')[0].isDisplayed();
+        let elem = $$(sel.bottons)[0].isDisplayed();
         assert.equal(elem, true);
     }
 
     forgotUsernamePageRecover() {
-        let elem = $$('body div:nth-child(1) button')[1].isDisplayed();
+        let elem = $$(sel.btnRecover)[1].isDisplayed();
         assert.equal(elem, true);
     }
 
     emailInputBoxIsDisplayd() {
-        let elem = $$('#Email')[0].isDisplayed();
+        let elem = $$(sel.email)[0].isDisplayed();
         assert.equal(elem, true);
 
     }
 
     iconInputBoxIsDisplayd() {
-        let elem = $$('.gg-input-el-group svg')[0].isDisplayed();
+        let elem = $$(sel.icon)[0].isDisplayed();
         assert.equal(elem, true);
 
     }
 
     labelInputBox() {
-        let elem = $$('fieldset label')[0].isDisplayed();
+        let elem = $$(sel.labelInputBox)[0].isDisplayed();
         assert.equal(elem, true);
     
     }
 
     linkIForgotMyPassword() {
-        let elem = $$('fieldset label')[1].isDisplayed();
+        let elem = $$(sel.labelInputBox)[1].isDisplayed();
         assert.equal(elem, true);
     }
 
     linkIForgotMyPasswordRedirect() {
-        $$('fieldset label')[1].click();
-        //let elem = browser.getUrl()
-        //assert.equal(elem, );
+        $$(sel.labelInputBox)[1].click();
         let elem = $$(sel.titleText)[0].getText();
         assert.equal(elem,  exp.forgotPasswordPage);
-        $$('a.gg-link:nth-child(1)')[0].click()
+        this.openForgotUsername();
+        
     }
 
     bottonBackRedirect() {
-        $$('body div:nth-child(1) button')[0].click();
-        let elem = $$(sel.loginBtnLogin)[0].waitForDisplayed();
+        $$(sel.btnBack)[0].click();
+        let elem = $$(sel.btnLogin)[0].waitForDisplayed();
         assert.equal(elem, true);
-        $$('a.gg-link:nth-child(1)')[0].click()
+        this.openForgotUsername();
 
-        //let elem = browser.getUrl()
-        //assert.equal(elem, 'https://cx-sb01-auth01.azurewebsites.net/Account/');
     }
 
     bottonRecoverError() {
-        $('#Email').addValue('tester@tester');//(testerData.testPassword);
-        //assert.equal( $$('#Email')[0].getValue().length, 100);
+        $(sel.email).addValue(data.testPassword);
 
-        $$('body div:nth-child(1) button')[1].click();
-        let elem = $$('.gg-login-grid  form div')[0].getText();
-        assert.equal(elem, 'An e-mail with your username has been sent to the entered e-mail address if it corresponds to an active account.')
-
-        //let elem = browser.getUrl()
-        //assert.equal(elem, 'http://oxcdemo.alluma.org/#/quick/intro');
+        $$(sel.btnRecover)[1].click();
+        let elem = $$(sel.errorMessage)[0].getText();
+        assert.equal(elem, exp.errorMessage)
+        this.openForgotUsername()
     }
 
     backBottonColor() {
-        let elem = $$('body div:nth-child(2) button')[0].getCSSProperty('color');
-        assert.equal(elem.value, 'rgba(255,255,255,1)');
+        let elem =$$(sel.btnBack)[0].getCSSProperty('color');
+        assert.equal(elem.value, exp.btnBackColor);
     }
 
     bottonRecoverErrorTextColor() {
-        $('#Email').addValue('tester@tester');//(testerData.testPassword);
-        //assert.equal( $$('#Email')[0].getValue().length, 100);
+        $(sel.email).addValue(data.testPassword);
+        
 
-        $$('body div:nth-child(1) button')[1].click();
-        let elem = $$('.gg-login-grid  form div')[0].getCSSProperty('color');
-        assert.equal(elem.value, 'rgb(108, 59, 150)')
+        $$(sel.btnRecover)[1].click();
+        let elem = $$(sel.errorMessage)[0].getCSSProperty('color');
+        assert.equal(elem.value, exp.messageColor)
 
-        //let elem = browser.getUrl()
-        //assert.equal(elem, 'http://oxcdemo.alluma.org/#/quick/intro');
+        
     }  
 
     recoverBottonColor() {
-        let elem = $$('body div:nth-child(2) button')[1].getCSSProperty('color');
-        console.log($$('body div:nth-child(2) button')[1])
-        assert.equal(elem.value, 'rgba(255,255,255,1)');
+        let elem = $$(sel.btnRecover)[0].getCSSProperty('color');
+        assert.equal(elem.value, exp.btnBackColor);
     }
 
     recoverBottonText() {
-        let elem = $$('body div:nth-child(2) button')[1].getText();
-        assert.equal(elem.value, 'Recover Username');
+        let elem = $$(sel.bottons)[1].getText();
+        assert.equal(elem.value, exp.textRecover);
     }
 
     backBottonText() {
         let elem = $$('body div:nth-child(2) button')[0].getText();
-        assert.equal(elem.value, 'Back to Login');
+        assert.equal(elem.value, exp.textBack);
     }
 
 }

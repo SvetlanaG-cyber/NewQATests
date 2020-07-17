@@ -24,10 +24,10 @@ let message = {
     <div>Passed:  ${report.statistic.passed}</div>
     <div>Failed:  ${report.statistic.total - report.statistic.passed}</div>` 
 };
-/*transporter.sendMail(message, function(error,info){
+transporter.sendMail(message, function(error,info){
     if (error) {
         console.log(error);
     } else {
         console.log('Email sent: ' + info.response);
     }
-}) */
+});

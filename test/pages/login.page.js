@@ -143,17 +143,19 @@ class Login extends Base {
     }
     
     loginEmptyUsernameInputBox() {
-        $(sel.passwordInputBox).addValue(data.testPassword);
+        $(sel.passwordInputBox).setValue(data.testPassword);
+        this.clearInputField( $(sel.usernameInputBox));
         $$(sel.loginBtnLogin)[0].click();
-        let elem = $$(sel.loginErrorMessageUsername)[0].waitForDisplayed();
+        let elem = $$(sel.loginErrorInputMessage)[0].waitForDisplayed();
         assert.equal(elem,true);
         this.openBase();
     }
 
     loginEmptyPasswordInputBox() {
-         $(sel.usernameInputBox).addValue(data.testUsername);
+         $(sel.usernameInputBox).setValue(data.testUsername);
+         this.clearInputField($(sel.passwordInputBox));
          $$(sel.loginBtnLogin)[0].click();
-         let elem = $$(sel.loginErrorMessageUsername)[0].waitForDisplayed();
+         let elem = $$(sel.loginErrorInputMessage)[0].waitForDisplayed();
          assert.equal(elem,true);
          this.openBase();
      }
@@ -161,8 +163,8 @@ class Login extends Base {
     errorMassageText() {
         $(sel.usernameInputBox).addValue(data.testUsername);
         $$(sel.loginBtnLogin)[0].click();
-        $$(sel.loginErrorMessageUsername)[0].waitForDisplayed();
-        let elem = $$(sel.loginErrorMessageUsername)[0].getText();
+        $$(sel.loginErrorInputMessage)[0].waitForDisplayed();
+        let elem = $$(sel.loginErrorInputMessage)[0].getText();
         assert.equal(elem,exp.errorEmptyPasswordMessageText);
         this.openBase();
     }
@@ -170,8 +172,8 @@ class Login extends Base {
      errorPasswordMassageText() {
         $(sel.passwordInputBox).addValue(data.testPassword);
         $$(sel.loginBtnLogin)[0].click();
-        let elem = $$(sel.loginErrorMessageUsername)[0].waitForDisplayed();
-        let error  = $$(sel.loginErrorMessageUsername)[0].getText();
+        let elem = $$(sel.loginErrorInputMessage)[0].waitForDisplayed();
+        let error  = $$(sel.loginErrorInputMessage)[0].getText();
         assert.equal(error, exp.errorEmptyUsernameMessageText);
         this.openBase();
     }
@@ -180,7 +182,7 @@ class Login extends Base {
         $(sel.usernameInputBox).addValue(data.testUsername);
         $(sel.passwordInputBox).addValue(data.testPassword);
         $$(sel.loginBtnLogin)[0].click();
-        let elem = $$(sel.loginErrorInputUsername)[0].waitForDisplayed();
+        let elem = $$(sel.loginErrorInputMessage)[0].waitForDisplayed();
         assert.equal(elem,true);
         this.openBase();
     }
@@ -226,13 +228,21 @@ class Login extends Base {
     }
 
     usernameImgIsDisplayed() {
-        $$(sel.Img)[1].isDisplayed();
+        let elem = $$(sel.Img)[1].isDisplayed();
+        assert.equal(elem, true)
 
     }
 
     passwordImgIsDisplayed() {
-        $$(sel.Img)[2].isDisplayed();
+        let elem = $$(sel.Img)[2].isDisplayed();
+        assert.equal(elem, true)
 
+    }
+
+    btnLoginIsDisplayed() {
+        let elem = $$(sel.loginBtnLogin)[0].isDisplayed();
+        assert.equal(elem, true)
+        
     }
 
     errorIconIsDisplayed() {
@@ -240,7 +250,6 @@ class Login extends Base {
         $$(sel.Img)[0].isDisplayed();
     }
 
-    //$$(sel.loginBtnLogin)[0].isDisplayed();
 
 }
 

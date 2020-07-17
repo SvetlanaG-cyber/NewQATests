@@ -1,21 +1,21 @@
 import sel from '../selectors/browser.sel'
 import exp from '../expected/browser.exp'
-import {assert} from 'chai'
+import { assert } from 'chai'
 class Browse {
-    
-    title(){
-     browser.url('/');
-    browser.pause(10000);
-    let res=browser.getTitle()
-     assert.equal(res,exp.title)
+
+    title() {
+        browser.url('/');
+        browser.pause(10000);
+        let elem = $(sel.title).getText();
+        assert.equal(elem, exp.titleText);
     }
-    headerDisplayed(){
+    headerDisplayed() {
         $(sel.header).isDisplayed();
     }
-    appPageConteinerDisplayed(){
+    appPageConteinerDisplayed() {
         $(sel.appPageConteiner).isDisplayed();
     }
-    footerDisplayed(){
+    footerDisplayed() {
         $(sel.footer).isDisplayed();
     }
 }

@@ -12,7 +12,8 @@ export default {
     footerFooterline2: '.gg-footer-hdr2',
     footerFooterline3: '.gg-footer-hdr3',
     footerFooterline4: '.gg-footer-hdr4',
-    logo: '#logo',
+    logo: '#logo', //'.gg-footer-cc a:nth-child(2) img'
+    AllumaLink: 'div span:nth-child(1) a',
     logoAllumaFasebook: '._6tay',
     logoAllumaTwitterUrl: 'https://twitter.com/WeAreAlluma',
     logoAllumaLinkedin: '',

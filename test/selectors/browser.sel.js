@@ -1,5 +1,6 @@
 export default{
-    header:'#header',
-    appPageConteiner:'.site-content',
-    footer:'#footer'
+    header: '.gg-header',
+    appPageConteiner: '.gg-login-main',
+    footer: '.gg-footer',
+    title: '.gg-header-title',
 }

@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": "body .gg-btn-group div:nth-child(2) button"
+}

@@ -43,18 +43,19 @@ class Footer extends Base {
 
     footerLogoSrc(){
         let elem =$(sel.footerLogo).getAttribute('src');
+        console.log($(sel.Logo))
     assert.equal(elem.value,exp.footerLogoSrc) 
     }
 
-   /* footerTextInfoGrpSize(){
-        let elem = $(sel.footer).getCSSProperty('size');
+    footerTextInfoGrpSize(){
+        let elem = $(sel.AllumaLink).getCSSProperty('size');
         assert.equal(elem.value, exp.footerInfoGrpTextSize)
     }
 
     footerTextInfoGrpColor(){
-        let elem = $(sel.footerInfoGrp).getCSSProperty('color');
+        let elem = $(sel.AllumaLink).getCSSProperty('color');
         assert.equal(elem.value, exp.footerTextInfoGrpColor)
-    }*/
+    }
 
     footerlogoAlignment(){
         let logoAlign=$(sel.footerLogo).getCSSProperty('vertical-align');
@@ -84,7 +85,7 @@ class Footer extends Base {
         this.openBase(); 
     }
 
-    /*footerAboutDisplayed() {
+    footerAboutDisplayed() {
         let elem = $(sel.footerAboutline1).isDisplayed();
         assert.equal(elem, true)
     }
@@ -93,10 +94,10 @@ class Footer extends Base {
         assert.equal(elem, true)
     }
 
-    /*footerTextInfoGrpRedirect(){
-        let elem = $('*=alluma.org').getText();
-        assert.equal(elem, 'Alluma')
+    footerTextInfoGrpRedirect(){
+        let elem = $(sel.AllumaLink).getText();
+        assert.equal(elem, exp.footerText1)
         
-    }*/
+    }
 }
 export default new Footer();

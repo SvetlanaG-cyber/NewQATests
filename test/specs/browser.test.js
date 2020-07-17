@@ -1,26 +1,21 @@
-/*import {assert} from 'chai';
-import exp from '../expected/browser.exp';
-import browse from '../pages/browser.page';
+import browser from '../pages/browser.page';
 
-describe('Browse', function () { //define suite title by passing a string
+describe('Browser', function () {
 
-    it('Tab title', function () { //define test title by passing a string
-     //browser.url('/');
-     browse.title();
-     //let title=browser.getTitle();
-     //assert.equal(browser.getTitle(),'Intellectual Games Club')
-    });
-    it('Header is displayed', function () { //define test title by passing a string
-     //$('#header').isDisplayed()
-     browse.headerDisplayed();
-    });
-    it('App/Pages container is displyed', function () { //define test title by passing a string
-     // $('.site-content').isDisplayed()
-     browse.appPageConteinerDisplayed();
-    });
-    it('Footer is displayed', function () { //define test title by passing a string
-    // $('#footer').isDisplayed()
-    
-      browse.footerDisplayed();
-    })
-});*/
+  it('Main-title', function () {
+    browser.title();
+  });
+
+  it('Header-is-displayed', function () {
+    browser.headerDisplayed();
+  });
+
+  it('AppPages-container-is-displyed', function () {
+    browser.appPageConteinerDisplayed();
+  });
+
+  it('Footer-is-displayed', function () {
+    browser.footerDisplayed();
+  });
+
+});
