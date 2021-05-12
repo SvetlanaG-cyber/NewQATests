@@ -26,7 +26,7 @@
     "@babel/register": "^7.10.4",
     "@wdio/cli": "^6.1.25",
     "chromedriver": "^83.0.1",
-    "nodemailer": "^6.4.10",
+    "nodemailer": "^6.4.16",
     "wdio-chromedriver-service": "^6.0.3",
     "webdriverio": "^6.1.25"
   },
